@@ -7,7 +7,9 @@ Para a Gestão de Base: O banco não ofereceria um número apenas de oferta, sem
 
 ---
 
-Traçar uma rota alternativa: Um teste A|B com a hipótese de que usuários que visualizam o produto primeiro, tem menor evasão. Em caso de notificação ativa, não é boa prática pedir documento de início, sendo que você está contatando o usuário. Pode gerar denúncia e bloqueio do número junto a meta. Colocar 70/20, 70% para o fluxo antigo e 20% para o novo, com qualificação de lead, com aumento progressivo conforme resultado.
+## Traçar uma rota alternativa
+
+Fazer um teste A|B com a hipótese de que usuários que visualizam o produto primeiro, tem menor evasão. Em caso de notificação ativa, não é boa prática pedir documento de início, sendo que você está contatando o usuário. Pode gerar denúncia e bloqueio do número junto a meta. Colocar 70/20, 70% para o fluxo antigo e 20% para o novo, com qualificação de lead, com aumento progressivo conforme resultado.
 Trackings: fluxo trackeado para entendermos os inputs inesperados dos usuários, respostas de CSAT. Usuário sempre se manifesta.
 Conferir também se Mia possui verificado. 
 
