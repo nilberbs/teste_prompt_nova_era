@@ -1,0 +1,16 @@
+# Defesa da Arquitetura do Prompt
+
+## **1. Estratégia de Conteúdo e Segurança:** 
+O prompt isola a validação como objetivo único, blinda a IA contra engenharia social (injeção de prompt) e oculta dados de contexto do sistema, mantendo um tom conversacional objetivo para o canal.
+
+## **2. Mitigação de Erros e Controle de Custos:** 
+O fluxo trata desvios de assunto, abandonos de conversa e impõe uma **trava estrita de no máximo 2 tentativas de validação por usuário**. Isso previne loops de erro, mitiga ataques de força bruta e evita o gasto excessivo de tokens de IA.
+
+## **3. Integração e Uso de Ferramentas:** 
+A tool `{{validate_customer}}` é nossa garantia de sucesso. A IA atua como partner, sanitizando os dados do usuário (removendo pontuações) antes do envio, e condiciona o avanço na conversa exclusivamente ao retorno positivo da API.
+
+## **4. Gestão de Riscos e Prevenção de Fraudes:** 
+Aplicação do modelo rígido de segurança, vetando qualquer oferta ou exposição de dados antes da autenticação. A IA fornece respostas genéricas em caso de falha, impedindo a "pesca de dados" por fraudadores.
+
+## **5. Resiliência do Fluxo:** 
+A IA barra requisições inúteis ao identificar inconsistências lógicas de imediato (ex: enviar {{#if isCPF}}CNPJ{{else}}CPF{{/if}} quando se pede {{#if isCPF}}CPF{{else}}CNPJ{{/if}}). Em caso de falha sistêmica da tool, adota uma postura segura, pausando o fluxo sem expor erros técnicos que possam descredibilizar a empresa.
